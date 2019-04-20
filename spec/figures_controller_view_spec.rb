@@ -63,8 +63,8 @@ describe FiguresController do
 
   it "allows you to create a new figure with a new landmark" do
     visit '/figures/new'
-    fill_in :figure_name, :with => "Doctor Who"
-    fill_in :new_landmark, :with => "The Tardis"
+    fill_in 'figure[name]', :with => "Doctor Who"
+    fill_in 'landmark[name]', :with => "The Tardis"
     click_button "Create New Figure"
     figure = Figure.last
     landmark = Landmark.last
