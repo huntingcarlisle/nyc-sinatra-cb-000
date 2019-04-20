@@ -1,7 +1,7 @@
 <form action="/figures/<%=@figure.id%>" method="post">
   <input id="hidden" type="hidden" name="_method" value="patch">
 
-  <p>Name: <input type="text" name="figure_name" value="<%=@figure.name %>"></p>
+  <p>Name: <input type="text" name="figure[name]" value="<%=@figure.name %>"></p>
 
   <h3>Titles:</h3>
   <% @titles.each do |title| %>
