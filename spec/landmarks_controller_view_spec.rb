@@ -63,7 +63,7 @@ describe LandmarksController do
 
     visit "/landmarks/#{@original_landmark.id}/edit"
     fill_in 'landmark[name]', with: "BQE!!!!"
-    fill_in 'landmark[year_completed], with: 9999
+    fill_in 'landmark[year_completed]', with: 9999
     click_button "Edit Landmark"
 
     expect(page.body).to include("BQE!!!!")
