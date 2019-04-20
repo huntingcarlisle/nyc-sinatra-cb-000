@@ -50,8 +50,8 @@ describe FiguresController do
 
    it "allows you to create a new figure with a new title" do
     visit '/figures/new'
-    fill_in :figure_name, :with => "Doctor Who"
-    fill_in :new_title, :with => "Time Lord"
+    fill_in 'figure[name]', :with => "Doctor Who"
+    fill_in 'title[name]', :with => "Time Lord"
     click_button "Create New Figure"
     figure = Figure.last
     title = Title.last
